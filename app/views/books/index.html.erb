@@ -10,19 +10,18 @@
             	<h2>Index</h2>
 
             <% @books.each do |book| %>
-            <div class="col-xs-4">
-            	<div class="books">
-            		<div class="books-contents">
-
-            			<div class="book-title">
-            				<%= book.title %>
-            			</div>
-            			<div class="book-body">
-            				<%= book.body %>
+            	
+            		<div class="col-xs-4">
+            			<div id="book-content">
+            				<div class="book-title">
+            					<%= book.title %>
+            				</div>
+            				<div class="book-body">
+            					<%= book.body %>
+            				</div>
             			</div>
             		</div>
-            	</div>
-            </div>
+            	
             <% end %>
 
         </div>
