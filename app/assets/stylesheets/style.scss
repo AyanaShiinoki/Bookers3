@@ -1,0 +1,68 @@
+
+.jumbotron{
+	height: 300px;
+	background-image: url(0.jpeg);
+	background-position: center;
+	.main-title{
+		color:white;
+		text-align: center;
+	}
+	.list-inline{
+		text-align: center;
+	}
+	a{
+		color: white;
+		font-size: 20px;
+	&:hover{
+		color:white;
+		}
+	}
+}
+
+.col-xs-9{
+	background-color:white;
+	.col-xs-4{
+		background-color: white;
+		padding:10px 10px 10px 10px;
+	}
+}
+
+#book-content {
+    border: none;
+    background-color: pink;
+    height: 250px;
+    padding: 10px;
+    border-radius:10px;
+
+    .book-title{
+    	 background-color:white;
+    	 opacity:0.8;
+    	 border-radius: 10px;
+    	 height: 50px;
+    	 text-align: center;
+    	 line-height: 50px;
+    	 font-size: 20px;
+    }
+
+    .book-body{
+    	 background-color:white;
+    	 opacity:0.8;
+    	 border-radius:10px;
+    	 height: 160px;
+    	 margin-top: 15px;
+    	 padding: 10px;
+    }
+}
+
+.new-book-box {
+	h2{
+	text-align: center;
+}
+.create-book{
+	margin-top: 15px;
+	}
+}
+
+
+
+
