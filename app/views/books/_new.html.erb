@@ -1,5 +1,6 @@
 <div class="new-book-box">
             <h2>New book</h2>
+    <div class="new-book-box-content">
             <%= form_for(book) do |f| %>
 
                 <label class = "">Title</label>
@@ -13,8 +14,9 @@
                         <%= f.text_area :body,class:"form-control m-4"  %>
                     </div>
                     <div class="create-book">
-                        <%= f.submit "Create Book", class:"btn btn-primary btn-block"%>
+                        <%= f.submit "Create Book", class:"btn btn-default"%>
                     </div>
             <% end %>
+    </div>
 </div>
 

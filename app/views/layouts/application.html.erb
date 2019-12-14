@@ -10,21 +10,42 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.scss" rel="stylesheet">
   </head>
-
   <body>
 <!-- ヘッダー -->
 <header class="jumbotron">
     <div class="container">
+    <div class="title-cover">
       <h1 class="main-title">Bookers</h1>
         <ul class="list-inline">
-          <li class="list-inline-item">
-          <%= link_to " Home",root_path, class: "glyphicon glyphicon-home" %>
-          </li>
-          <li class="list-inline-item">
-          <%=link_to " Books" ,books_path, class: "glyphicon glyphicon-book" %>
-          </li>
+          <% if user_signed_in? %>
+              <li class="list-inline-item">
+                <%= link_to " Home",root_path %>
+              </li>
+              <li>
+                ◆
+              </li>
+              <li class="list-inline-item">
+                <%=link_to " Books" ,books_path %>
+              </li>
+              <li>
+                ◆
+              </li>
+              <li class="list-inline-item">
+              <%=link_to " logout" , destroy_user_session_path, method: :delete %>
+              </li>
+          <% else %>
+              <li class="list-inline-item">
+                <%=link_to " Signup", new_user_registration_path %>
+              </li>
+              <li>
+                ◆
+              </li>
+              <li class="list-inline-item">
+                <%=link_to " Login" ,new_user_session_path %>
+              </li>
+          <% end %>
         </ul>
-
+    </div>
     </div>
 </header>
 
