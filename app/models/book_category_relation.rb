@@ -1,0 +1,2 @@
+class BookCategoryRelation < ApplicationRecord
+end

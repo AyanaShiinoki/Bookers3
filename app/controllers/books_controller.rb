@@ -11,13 +11,14 @@ class BooksController < ApplicationController
 
   def index
   	@book=Book.new
-  	@books=Book.all
+  	@books=Book.page(params[:page]).reverse_order
     @user = current_user
   end
 
   def show
     @book = Book.find(params[:id])
     @user = User.find(@book.user.id)
+    @post_comment = PostComment.new
   end
 
   def destroy

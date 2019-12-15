@@ -1,9 +1,16 @@
+
+/* var */
 $brown:#5A3E38;
 $pink:#A26356;
 $skyblue:#9BB5C9;
 $blue:#3D687C;
 $navy:#292F37;
+$green:#8BA468;
+$orange:#DA8B54;
 
+
+
+/* header */
 .jumbotron{
 	height: 300px;
 	background-image: url(7.jpeg);
@@ -11,58 +18,100 @@ $navy:#292F37;
 	background-position: center;
 	margin:10px;
 	border-radius: 10px;
-	.title-cover {
-		margin: 0 auto;
-		background: rgba(255,255,255, 0.6);
-		width: 400px;
-		height: 200px;
-		padding: 20px;
-		border-radius: 10px;
-	}
-	.main-title{
-		color: $brown;
-		text-align: center;
-		font-family: Franklin Gothic Medium;
-		border-bottom: 1px solid;
-	}
-	.list-inline{
-		text-align: center;
-		font-family: Franklin Gothic Medium;
-		.list-inline-item{
-			margin-top: 10px;
-		}
-	}
-	a{
-		color:#292F37;
-		font-size: 20px;
-		transition: .4s;
-	&:hover{
-		color:$pink;
-		text-decoration: none;
 
+		.title-cover {
+			margin: 0 auto;
+			background: rgba(255,255,255, 0.6);
+			width: 400px;
+			height: 200px;
+			padding: 20px;
+			border-radius: 10px;
 		}
-	}
+			.main-title{
+				color: $brown;
+				text-align: center;
+				font-family: Franklin Gothic Medium;
+				border-bottom: 1px solid;
+			}
+				.list-inline{
+					text-align: center;
+					font-family: Franklin Gothic Medium;
+						.list-inline-item{
+							margin-top: 10px;
+						}
+				}
+					a{
+						color:#292F37;
+						font-size: 20px;
+						transition: .4s;
+							&:hover{
+								color:$pink;
+								text-decoration: none;
+							}
+					}
 }
 
+
+/* new book create */
 .new-book-box{
 	/*width: 90%;*/
 	margin: 0 auto;
+
 	h2{
-		margin:0;
+		margin:0 0 10px 0;
 		text-align: center;
 		font-family: Franklin Gothic Medium;
 	}
+
+
+		.new-book-box-content{
+			border-bottom: 1px dotted;
+			padding: 30px 10px 40px 10px;
+			margin-bottom: 50px;
+			/*background-color:pink;*/
+				.create-book{
+					margin-top: 10px;
+				}
+		}
 }
 
+
+/* profile */
+.profile{
+	border-bottom: 1px dotted;
+	padding-bottom:50px;
+
+	.username{
+	font-family: Franklin Gothic Medium;
+	}
+		.profile-edit{
+			margin-top:50px;
+				a{
+					font-family: Franklin Gothic Medium;
+					display: block;
+    				text-align: center;
+    				transition: .4s;
+    				color:$navy;
+
+    					&:hover{
+    						color:$skyblue;
+    						text-decoration: none;
+    						border: 1px dotted;
+    					}
+				}
+		}
+}
+
+
+
+/* user */
 .col-xs-4{
-	.row{
-		.user-info{
-			/*background-image: url(4.png);*/
-			background-color:$skyblue;
-			padding: 10px;
-			margin:0 auto;
-			height: 170px;
-			border-radius:0 10px 10px 10px;
+	.user-info{
+		/*background-image: url(4.png);*/
+		padding: 10px;
+		margin:0 auto;
+		height: 170px;
+		border-radius:0 10px 10px 10px;
 
 			.col-xs-6{
 				text-align: center;
@@ -70,142 +119,181 @@ $navy:#292F37;
 
 					.username{
 						margin:0 0 10px 0;
+						a{
+							color:$navy;
+							transition: .4s;
+							&:hover{
+								color:$pink;
+								transition: .4s;
+								text-decoration: none;
+							}
+						}
 					}
 			}
-		}
 	}
 }
 
+
+/* books index */
+
 .col-xs-8{
+
 	h2{
-		margin:0;
+		margin:0 0 10px 0;
 		text-align: center;
 		font-family: Franklin Gothic Medium;
 	}
-	.col-xs-4{
-		background-color: white;
-		padding:10px 10px 10px 10px;
-	}
-}
-
-#book-content {
-	font-family:MS UI Gothic;
-	color:$navy;
-    border: none;
-    background-image: url(11.png);
-    background-repeat : no-repeat;
-    background-position: center;
-    /*background-color:$skyblue;*/
-    /*background-image: url(5.jpg);*/
-    /*background-size: 200%;*/
-    height: 270px;
-    /*padding: 10px;*/
-    border-radius:10px;
-
-    .book-title{
-/*    	 background-color:white;
-    	 opacity:0.8;*/
-    	 /*border-radius: 10px;*/
-    	/* border-bottom: double 6px #87CEFA;*/
-    	margin: 0 auto;
-    	 height: 90px;
-    	 width: 80%;
-    	 text-align: center;
-    	 .border{
-    	 /*background-color:$blue;*/
-    	 opacity:0.8;
-    	 border-radius: 5px;
-    	 padding: 10px 40px;
-    	 line-height: 90px;
-    	 font-size: 20px;
-    	 /*color:$brown;*/
-    }
-}
-    .book-body{
-    	border-top:1px solid ;
-    	/*margin: 0 auto;*/
-    	 /*background-color:pink;*/
-    	 opacity:0.8;
-    	 /*border-radius:0 0 10px 10px;*/
-    	 height: 90px;
-    	 width: 78%;
-    /*	 margin-top: 5px;*/
-    	 margin-top: 33px;
-		 margin-bottom: 7px;
-		 margin-left: 30px;
-    	 padding: 10px 10px 10px 10px;
-    }
-
-    .book-action{
-    	/*margin: 0 auto;*/
-    	opacity:0.8;
-    	/*width: 90%;*/
-    	/*padding-top:32px;*/
-    	padding-left: 70px;
- 		text-align: center;
- 		/*margin-top: 10px;*/
- 		font-size:20px;
- 			a{
- 				color:$navy;
- 			&:hover{
- 				color:$pink;
- 				text-decoration: none;
- 				transition: .4s;
- 			}
- 		}
-
-    }
-}
-
-.new-book-box-content{
-	padding: 10px;
-	margin-top: 10px;
-	margin-bottom: 30px;
-	background: rgba(90,62,56, 0.6);
-	/*background-color:pink;*/
-	border-radius: 10px;
-	.create-book{
-		margin-top: 10px;
-	}
-	}
-
-	.edit-link{
-		background-color:$blue;
-		width: 70px;
-		height: 20px;
-		border-radius: 10px 10px 0px 0;
-		transition: .4s;
-			&:hover{
-			background-color:$pink;
+			.col-xs-4{
+				background-color: white;
+				padding:10px 10px 10px 10px;
 			}
-		a{
-		font-family: Franklin Gothic Medium;
-		display: block;
-    	text-align: center;
-    	color: white;
-    	transition: .4s;
-    		&:hover{
-    		color:black;
-    		text-decoration: none;
-    		}
+
+}
+
+				#book-content {
+					font-family:MS UI Gothic;
+					color:$navy;
+    				border: none;
+    				background-image: url(11.png);
+    				background-repeat : no-repeat;
+    				background-position: center;
+    				/*background-color:$skyblue;*/
+    				/*background-image: url(5.jpg);*/
+    				/*background-size: 200%;*/
+    				height: 270px;
+    				/*padding: 10px;*/
+    				border-radius:10px;
+
+    				.book-title{
+						/*background-color:white;
+						opacity:0.8;*/
+						/*border-radius: 10px;*/
+						margin: 0 auto;
+						height: 90px;
+    	 				width: 80%;
+    	 				text-align: center;
+
+    	 					.book-title-text{
+    	 						padding: 10px 40px;
+    	 						line-height: 90px;
+    	 						font-size: 20px;
+    	 						a{
+    	 						transition: 1s;
+    	 						color:$navy;
+    	 						text-decoration: none;
+    	 							&:hover{
+    	 								color:$skyblue;
+    	 								transition: .4s;
+    	 							}
+    	 						}
+
+    						}
+					}
+
+    							.book-body{
+    								border-top:1px solid ;
+    								/*margin: 0 auto;*/
+    	 							/*background-color:pink;*/
+    	 							opacity:0.8;
+    	 							/*border-radius:0 0 10px 10px;*/
+    	 							height: 90px;
+    	 							width: 78%;
+    								/*margin-top: 5px;*/
+    	 							margin-top: 33px;
+		 							margin-bottom: 7px;
+		 							margin-left: 30px;
+    	 							padding: 10px 10px 10px 10px;
+    							}
+
+    								.book-action{
+    									opacity:0.8;
+    									padding-top:5px;
+    									padding-left: 120px;
+ 										text-align: center;
+ 										font-size:18px;
+
+ 										a{
+ 											color:$navy;
+ 												&:hover{
+ 												color:$pink;
+ 												text-decoration: none;
+ 												transition: .4s;
+ 												}
+ 										}
+    								}
+				}
+
+.user-books {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+			writing-mode: vertical-rl;
+			margin:0 auto;
+
+}
+
+.user-book {
+		font-size:20px;
+		height:270px;
+		width:85px;
+		background-image:url(15.png);
+		background-repeat : no-repeat;
+		background-position: center;
+		text-align:center;
+		position:relative;
+			a{
+			transition: .4s;
+			position: absolute;
+			transform: translate(-120%, -50%);
+			color:$navy;
+			font-family:MS UI Gothic;
+				&:hover{
+				color:$pink;
+				transition: .4s;
+				text-decoration: none;
+				}
+			}
+}
+
+.paginate{
+	text-align:center;
+	color:$blue;
+	font-family:fantasy;
+	font-size:20px;
+	a{
+		color:$skyblue;
+		transition: .4s;
+		&:hover{
+			transition: .4s;
+			text-decoration: none;
 		}
 	}
+}
 
-/*book-show*/
+
+/*bookshow*/
 .show-user-prolile{
-		margin-right: 20px;
-		margin-bottom: 20px;
-		padding: 5px 25px;
-		/*background-color: pink;*/
+	margin-right: 20px;
+	margin-bottom: 20px;
+	padding: 5px 25px;
+	/*background-color: pink;*/
+	/*padding-left:25px;*/
 
-		/*padding-left:25px;*/
 		.book-show-userimage{
 			margin-left: 10px;
 		}
-		.book-show-username{
-			padding: 10px 0 0 0;
-			font-size: 30px;
-			font-family: Franklin Gothic Medium;
-		}
+
+			.book-show-username{
+				padding: 10px 0 0 0;
+				font-size: 30px;
+				font-family: Franklin Gothic Medium;
+			}
 }
 
+
+.comment-content{
+	border-top:  1px dotted;
+	padding: 10px 0;
+		.list-inline-item{
+			margin: 5px 0;
+		}
+}
