@@ -2,13 +2,14 @@
 	<div class="user-info">
 		<div class=col-xs-6>
 			<%= attachment_image_tag user, :profile_image, :fill, 150, 150, format: 'jpeg'%>
+			<div class="profile-edit">
+				<%= link_to "EDIT",edit_user_path(@user) %>
+				</div>
 		</div>
 		<div class=col-xs-6>
 				<h2 class="username"><%= link_to "   #{user.name}   ",user_path(user.id) %></h2>
 				<p class="introduction-text"><%= simple_format(user.introduction) %></p>
-				<div class="profile-edit">
-				<%= link_to "EDIT",edit_user_path(@user) %>
-				</div>
+
 		</div>
 	</div>
 </div>
