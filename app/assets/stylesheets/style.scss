@@ -52,6 +52,57 @@ $orange:#DA8B54;
 }
 
 
+/* login */
+
+@mixin form_layout($color){
+	text-align:center;
+	color:$brown;
+	border-bottom: 2px dotted $color;
+	padding-bottom:20px;
+
+	h2{
+		padding-bottom:20px;
+		border-bottom: 2px dotted $color;
+	}
+
+		.field{
+		font-family:sans-serif;
+		font-size:15px;
+		padding:5px 0;
+		}
+
+			a{
+				color:$pink;
+			}
+
+				.actions{
+					padding:10px 0;
+				}
+}
+
+
+
+.login_form{
+	@include form_layout($skyblue);
+}
+
+
+.signup_form{
+	@include form_layout($pink);
+}
+
+.edit_form{
+	@include form_layout($orange);
+	.user-edit-form{
+		margin:0 auto;
+		padding:5px 0;
+	}
+}
+
+.edit_book_form{
+	@include form_layout($green);
+}
+
 /* new book create */
 .new-book-box{
 	/*width: 90%;*/
@@ -66,12 +117,18 @@ $orange:#DA8B54;
 
 		.new-book-box-content{
 			border-bottom: 1px dotted;
-			padding: 30px 10px 40px 10px;
+			padding: 30px 0px 20px 0px;
 			margin-bottom: 50px;
 			/*background-color:pink;*/
+
+			.category-select{
+						margin-top:20px
+					}
+
 				.create-book{
 					margin-top: 10px;
 				}
+
 		}
 }
 
@@ -104,28 +161,39 @@ $orange:#DA8B54;
 
 
 
+
 /* user */
 .col-xs-4{
 	.user-info{
 		/*background-image: url(4.png);*/
 		padding: 10px;
-		margin:0 auto;
 		height: 170px;
 		border-radius:0 10px 10px 10px;
 
 			.col-xs-6{
-				text-align: center;
 				padding:0;
 
+					
+
+					p{
+						font-family:MS UI Gothic;
+						text-align:left;
+						font-size:15px;
+						margin:0;
+					}
+
 					.username{
-						margin:0 0 10px 0;
+						margin:0 0 15px 0;
+						text-align:center;
 						a{
 							color:$navy;
 							transition: .4s;
 							&:hover{
+								padding:0px 20px 3px 20px;
 								color:$pink;
 								transition: .4s;
 								text-decoration: none;
+								border: 1px dotted;
 							}
 						}
 					}
@@ -172,9 +240,11 @@ $orange:#DA8B54;
 						height: 90px;
     	 				width: 80%;
     	 				text-align: center;
+    	 				margin-bottom:40px;
+
 
     	 					.book-title-text{
-    	 						padding: 10px 40px;
+    	 						padding: 10px 0px;
     	 						line-height: 90px;
     	 						font-size: 20px;
     	 						a{
@@ -196,16 +266,15 @@ $orange:#DA8B54;
     	 							/*background-color:pink;*/
     	 							opacity:0.8;
     	 							/*border-radius:0 0 10px 10px;*/
-    	 							height: 90px;
+    	 							height: 80px;
     	 							width: 78%;
     								/*margin-top: 5px;*/
-    	 							margin-top: 33px;
-		 							margin-bottom: 7px;
 		 							margin-left: 30px;
     	 							padding: 10px 10px 10px 10px;
     							}
 
-    								.book-action{
+    								.index-book-action{
+    									margin-top:7px;
     									opacity:0.8;
     									padding-top:5px;
     									padding-left: 120px;
@@ -255,7 +324,7 @@ $orange:#DA8B54;
 }
 
 .paginate{
-	text-align:center;
+	padding-left:710px;
 	color:$blue;
 	font-family:fantasy;
 	font-size:20px;
@@ -286,14 +355,68 @@ $orange:#DA8B54;
 				padding: 10px 0 0 0;
 				font-size: 30px;
 				font-family: Franklin Gothic Medium;
+				a{
+					color:$navy;
+					transition: .4s;
+					 &:hover{
+					 	color:$pink;
+						text-decoration:none;
+						transition: .4s;
+					}
+				}
+
 			}
 }
 
+.show-book-action{
+	margin-top:7px;
+    opacity:0.8;
+    padding-top:5px;
+    padding-left: 90px;
+ 	text-align: center;
+ 	font-size:18px;
+
+ 	a{
+ 		color:$navy;
+ 		&:hover{
+ 		color:$pink;
+ 		text-decoration: none;
+ 		transition: .4s;
+ 		}
+ 	}
+}
+
+.category{
+		margin-top:15px;
+		padding-left:90px;
+}
+
+.category-select{
+	font-size:12px;
+	font-family:YuGothic;
+
+}
+
+
+
 
 .comment-content{
+	margin-top:30px;
 	border-top:  1px dotted;
 	padding: 10px 0;
 		.list-inline-item{
 			margin: 5px 0;
 		}
 }
+
+
+.iine__button{
+    background: linear-gradient(to right, #feb400, #FFE300);
+    line-height: 42px;
+    color: #6d3701;
+    font-size: 14px;
+    display: inline-block;
+    padding: 0 18px;
+    border-radius: 100px;
+    font-weight: bold;
+ }

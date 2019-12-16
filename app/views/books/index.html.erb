@@ -20,21 +20,21 @@
             				    <div class="book-title">
             					   <span class="book-title-text"><%= link_to "#{book.title}",book_path(book.id) %></span>
             				    </div>
-            				    <div class="book-body">
-            					   <%= book.body %><br>
-                                </div>
-                                <div class="book-action">
-                                    <%= link_to "Destroy", book_path(book), method: :delete, "data-confirm" => "本当に削除しますか？" %>
 
+            				    <div class="book-body">
+          					   <%= simple_format(book.body) %>
+                                </div>
+                                <div class="index-book-action">
+                                    <%= link_to "Destroy", book_path(book), method: :delete, "data-confirm" => "本当に削除しますか？" %>
             				    </div>
                             </div>
                         </div>
                     <% end %>
                 </div>
-            <div class="paginate">
-            <%= paginate @books, class: "paginate" %>
-            </div>
 
         </div>
     </div>
+     <div class="paginate">
+            <%= paginate @books, class: "paginate" %>
+            </div>
 </div>

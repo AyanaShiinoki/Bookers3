@@ -27,10 +27,22 @@ class BooksController < ApplicationController
     redirect_to books_path
   end
 
+  def edit
+    @book = Book.find(params[:id])
+    if @book.user.id != current_user.id
+        redirect_to book_path(@book.id)
+    end
+  end
+
+  def update
+    @book = Book.find(params[:id])
+    @book.update(book_params)
+    redirect_to book_path(@book.id)
+  end
 
 	private
 	def book_params
-		params.require(:book).permit(:title,:body)
+		params.require(:book).permit(:title,:body, category_ids: [])
 	end
 
 

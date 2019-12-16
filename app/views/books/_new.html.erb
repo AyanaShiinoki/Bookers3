@@ -12,6 +12,17 @@
                     <div class="newbook-text">
                         <%= f.text_area :body,class:"form-control m-4"  %>
                     </div>
+
+                <div class="category-select">
+                    <%= f.label :category, 'Category' %><br>
+                    <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |category| %> 
+                        <%= category.label do %>
+                        <%= category.check_box %>
+                        <%= category.text %>
+                        <% end %>
+                    <% end %>
+                </div>
+
                     <div class="create-book">
                         <%= f.submit "Create Book", class:"btn btn-default"%>
                     </div>

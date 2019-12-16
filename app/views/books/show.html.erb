@@ -7,7 +7,7 @@
 						<%= attachment_image_tag @user, :profile_image, :fill, 180, 180, format: 'jpeg',class: "img-circle pull-left profile-thumb" %>
 					</div>
 					<div class="book-show-username">
-						<%= @user.name %><br>
+						<%= link_to "#{@user.name}", user_path(@user.id) %><br>
 					</div>
 					<div class="book-show-introduction">
 						<%= @user.introduction %>
@@ -23,12 +23,19 @@
             				<span class="book-title-text"><%= @book.title %></span>
             			</div>
 
+
 	           			<div class="book-body">
-            				<%= @book.body %><br>
-            				<%= link_to "show", user_path(@user.id) %>
+            				<%= simple_format(@book.body) %><br>
             			</div>
-            			<div class="book-action">
+            			<div class="show-book-action">
+            				<%= link_to "Edit", edit_book_path(@book) %>
                         	<%= link_to "Destroy", book_path(@book), method: :delete,"data-confirm" => "本当に削除しますか？" %>
+            			</div>
+            			            			<div class="category">
+            				<span>Category:</span>
+								<% @book.categories.each do |category| %>
+  									<%= category.name %><br>
+								<% end %>
             			</div>
             	</div>
         	</div>
