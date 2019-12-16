@@ -7,6 +7,7 @@ $blue:#3D687C;
 $navy:#292F37;
 $green:#8BA468;
 $orange:#DA8B54;
+$red:#9D434B;
 
 
 
@@ -173,7 +174,6 @@ $orange:#DA8B54;
 			.col-xs-6{
 				padding:0;
 
-					
 
 					p{
 						font-family:MS UI Gothic;
@@ -301,7 +301,7 @@ $orange:#DA8B54;
 }
 
 .user-book {
-		font-size:20px;
+		font-size:18px;
 		height:270px;
 		width:85px;
 		background-image:url(15.png);
@@ -310,6 +310,7 @@ $orange:#DA8B54;
 		text-align:center;
 		position:relative;
 			a{
+			height:150px;
 			transition: .4s;
 			position: absolute;
 			transform: translate(-120%, -50%);
@@ -362,11 +363,19 @@ $orange:#DA8B54;
 					 	color:$pink;
 						text-decoration:none;
 						transition: .4s;
+
 					}
 				}
 
+
 			}
 }
+
+
+.book-show-introduction{
+		font-family:MS UI Gothic;
+}
+
 
 .show-book-action{
 	margin-top:7px;
@@ -420,3 +429,19 @@ $orange:#DA8B54;
     border-radius: 100px;
     font-weight: bold;
  }
+
+.error_message{
+	font-size:15px;
+		h2{
+			font-size:16px;
+			color:$red;
+		}
+
+}
+
+.comment-form{
+	text-align:right;
+		.send{
+			margin-top:10px;
+		}
+}

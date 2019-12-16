@@ -10,7 +10,7 @@
 						<%= link_to "#{@user.name}", user_path(@user.id) %><br>
 					</div>
 					<div class="book-show-introduction">
-						<%= @user.introduction %>
+						<%= simple_format(@user.introduction) %>
 					</div>
 				</div>
 			</div>
@@ -70,7 +70,9 @@
             				<%= f.text_area :comment, rows:'5', class: "form-control",placeholder: "コメントをここに" %>
         				</div>
     				</div>
-    						<%= f.submit "Send", class: "btn btn-lg btn-base-1 mt-20 pull-right" %>
+    				<div class="send">
+    						<%= f.submit "Send", class: "btn btn-default" %>
+    				</div>
 				<% end %>
 			</div>
 
