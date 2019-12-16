@@ -33,10 +33,12 @@ $red:#9D434B;
 				text-align: center;
 				font-family: Franklin Gothic Medium;
 				border-bottom: 1px solid;
+				margin:0;
 			}
 				.list-inline{
 					text-align: center;
 					font-family: Franklin Gothic Medium;
+					margin-bottom:10px;
 						.list-inline-item{
 							margin-top: 10px;
 						}
@@ -445,3 +447,51 @@ $red:#9D434B;
 			margin-top:10px;
 		}
 }
+
+
+
+
+dl.searchbox{
+  width: 350px;
+  position:relative;
+  background: rgba(255,255,255, 0.5);
+  border:1px solid #aaa;
+  border-radius:6px;
+}
+dl.searchbox dt{
+  padding:3px 0 3px 5px;
+  font-family:monospace;
+}
+
+
+
+dl.searchbox dt input{
+  width:70%;
+  height:30px;
+  line-height:30px;
+  background:none;
+  border:none;
+  font-family:MS UI Gothic;
+  color:$brown;
+  padding-left:10px;
+}
+dl.searchbox dd{
+  position:absolute;
+  top:1px;
+  right:1px;
+  width:30%;
+  text-align:right;
+}
+
+input.btn.btn-link{
+	color:$skyblue;
+	font-family:monospace;
+	transition: .5s;
+	&:hover{
+		color:$blue;
+		text-decoration:none;
+		transition: .5s;
+	}
+}
+
+

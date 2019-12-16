@@ -45,6 +45,15 @@
               </li>
           <% end %>
         </ul>
+
+<dl class="searchbox">
+  <%= search_form_for @search, url: books_path do |f| %>
+    <dt><%= f.text_field :title_cont ,placeholder: 'Book title' %></dt>
+    <dd><%= f.submit ("Search") , class: 'btn btn-link'%></dd>
+  <% end %>
+</dl>
+
+
     </div>
     </div>
 </header>

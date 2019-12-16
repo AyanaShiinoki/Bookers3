@@ -7,6 +7,13 @@ class ApplicationController < ActionController::Base
     root_path
 	end
 
+before_action :set_search
+
+def set_search
+  #@search = Article.search(params[:q])
+  @search = Book.ransack(params[:q]) #ransackメソッド推奨
+  @search_books = @search.result.page(params[:page])
+end
 
   protected
   def configure_permitted_parameters
