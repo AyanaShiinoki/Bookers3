@@ -42,25 +42,29 @@
 
 	<div class="row">
 		<div class="col-xs-6 col-md-offset-3">
-
-			<div class="comment-content">
-				<ul class="list-inline">
-					<% @book.post_comments.each do |post_comment| %>
-						<li class="list-inline-item">
-							<%= attachment_image_tag post_comment.user, :profile_image, :fill, 40, 40, format: 'jpeg' %>
-						</li>
-					<!-- 	<li class="list-inline-item">
-							<%= post_comment.user.name %>
-						</li> -->
-						<li class="list-inline-item">
-							<%= post_comment.comment %>  by  <%= post_comment.user.name%>
-							<%= link_to "×", post_comment_path(@book, post_comment), method: :delete,"data-confirm" => "本当に削除しますか？" %>
-						</li>
-						<br>
-					<% end %>
-				</ul>
+			<div class="col-xs-10 col-md-offset-1">
+				<div class="comment-content">
+					<ul class="list-inline">
+						<% @book.post_comments.each do |post_comment| %>
+							<li class="list-inline-item">
+								<%= attachment_image_tag post_comment.user, :profile_image, :fill, 50, 50, format: 'jpeg' %>
+							</li>
+							<li class="list-inline-item">
+								<div class="comment-text">
+									<%=post_comment.comment %>
+								</div>
+									by
+								<%= link_to "#{@user.name}", user_path(@user.id) %>
+								<div class="comment-delete">
+									<%= link_to "×",[@book,post_comment], method: :delete,"data-confirm" => "本当に削除しますか？" %>
+								</div>
+							</li>
+							<br>
+						<% end %>
+					</ul>
+				</div>
 			</div>
-
+		<div class="col-xs-10 col-md-offset-1">
 			<div class="comment-form">
 				<%= form_for [@book, @post_comment] do |f| %>
 					<div class="row">
@@ -73,8 +77,9 @@
     				</div>
 				<% end %>
 			</div>
+		</div>
 
-
+			</div>
 		</div>
 	</div>
 

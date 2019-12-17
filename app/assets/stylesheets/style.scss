@@ -8,6 +8,7 @@ $navy:#292F37;
 $green:#8BA468;
 $orange:#DA8B54;
 $red:#9D434B;
+$whiteblue:#B7C7D3;
 
 
 
@@ -171,6 +172,7 @@ $red:#9D434B;
 
 
 
+
 /* user */
 .col-xs-4{
 	.user-info{
@@ -309,7 +311,7 @@ $red:#9D434B;
 }
 
 .user-book {
-		font-size:18px;
+		font-size:15px;
 		height:270px;
 		width:85px;
 		background-image:url(15.png);
@@ -317,7 +319,7 @@ $red:#9D434B;
 		background-position: center;
 		text-align:center;
 		position:relative;
-		padding-right:3px;
+		padding-right:7px;
 			a{
 			height:150px;
 			transition: .4s;
@@ -375,11 +377,28 @@ $red:#9D434B;
 		font-size:15px;
 		text-align:center;
 	}
+	.profile-edit{
+			width:150px;
+			margin-top:10px;
+			margin-left:40px;
+				a{
+					font-family: Franklin Gothic Medium;
+					display: block;
+    				text-align: center;
+    				transition: .4s;
+    				color:$navy;
+
+    					&:hover{
+    						color:$skyblue;
+    						text-decoration: none;
+    						border: 1px dotted;
+    					}
+				}
+		}
 }
 
 /*bookshow*/
 .show-user-prolile{
-	margin-right: 20px;
 	margin-bottom: 10px;
 	padding: 5px 25px;
 	/*background-color: pink;*/
@@ -394,7 +413,6 @@ $red:#9D434B;
 		}
 
 			.book-show-username{
-				padding: 10px 0 0 0;
 				font-size: 30px;
 				font-family: Franklin Gothic Medium;
 				a{
@@ -459,12 +477,41 @@ $red:#9D434B;
 .comment-content{
 	margin-top: 40px;
 	border-top:  1px dotted;
-	padding: 10px 0;
+	padding-top: 20px ;
+
+
 		.list-inline-item{
-			margin: 5px 0;
+			margin-bottom:10px;
+
+			.comment-text{
+				display:inline;
+				font-size:15px;
+				font-family:MS UI Gothic;
+			}
+				a{
+					color:$skyblue;
+					&:hover{
+						color:$blue;
+						text-decoration:none;
+						transition: .4s;
+					}
+				}
+
+				.comment-delete{
+					display:inline;
+
+					a{
+						font-size:20px;
+						color:$pink;
+						&:hover{
+							color:$red;
+							text-decoration:none;
+
+						}
+					}
+				}
 		}
 }
-
 
 .iine__button{
     background: linear-gradient(to right, #feb400, #FFE300);
@@ -511,6 +558,7 @@ dl.searchbox dt{
 
 
 dl.searchbox dt input{
+height:200px;
   width:70%;
   height:30px;
   line-height:30px;
@@ -539,4 +587,18 @@ input.btn.btn-link{
 	}
 }
 
+.footer{
+
+	background-image:url(20.png);
+	width:100%;
+	height:200px;
+	padding-bottom:30px;
+	h2{
+		color:$brown;
+		opacity:0.8;
+		line-height:180px;
+		font-size:50px;
+		text-align:center;
+	}
+}
 
