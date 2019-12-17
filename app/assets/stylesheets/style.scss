@@ -199,11 +199,10 @@ $whiteblue:#B7C7D3;
 							color:$navy;
 							transition: .4s;
 							&:hover{
-								padding:0px 20px 3px 20px;
 								color:$pink;
 								transition: .4s;
 								text-decoration: none;
-								border: 1px dotted;
+								border-bottom: 1px dotted;
 							}
 						}
 					}
@@ -408,11 +407,10 @@ $whiteblue:#B7C7D3;
 			margin-left: 10px;
 		}
 
-		.book-show-username{
-			text-align:center;
-		}
 
 			.book-show-username{
+				text-align:center;
+				padding-right:25px;
 				font-size: 30px;
 				font-family: Franklin Gothic Medium;
 				a{
