@@ -4,11 +4,9 @@ class User < ApplicationRecord
   presence: true,
   length: { in: 2..20 }
 
-	validates :email,
-	presence: true
 
-	validates :encrypted_password,
-	presence: true
+	# validates :encrypted_password,
+	# presence: true
 
   validates :introduction,
   length: { maximum: 50 }
